@@ -16,14 +16,29 @@
 
 <table>
   <tr>
-    <td align="center" width="33%"><img src="screenshots/01-home.png" alt="홈 화면: 진행 중인 운동과 최근 기록" width="240"><br><b>홈</b><br>진행 중인 운동 이어 적기 · 최근 기록</td>
+    <td width="45%" align="center"><img src="screenshots/01-home.png" alt="홈 대시보드: 진행 중인 운동, 운동한 날·완료 세트·주 평균, 3달 운동일 격자, 부위별 마지막 운동일" width="300"></td>
+    <td valign="middle">
+      <h3>홈 대시보드</h3>
+      <ul>
+        <li><b>진행 중인 운동</b> — 몇 번째 종목까지 했는지 보여주고 바로 이어 적기</li>
+        <li><b>요약 숫자</b> — 운동한 날 · 완료 세트 · 주 평균, 지난 기간과 비교</li>
+        <li><b>운동일 격자</b> — 1주 · 2주 · 1달 · 3달 중 고른 기간을 한 장에</li>
+        <li><b>부위별 마지막 운동일</b> — 가장 오래 쉰 부위가 맨 위로 와서 오늘 뭘 할지 정하기 쉽게</li>
+      </ul>
+    </td>
+  </tr>
+</table>
+
+<table>
+  <tr>
     <td align="center" width="33%"><img src="screenshots/02-session-live.png" alt="운동 기록 화면: 종목마다 지난 기록이 보이고 세트를 체크" width="240"><br><b>운동 기록</b><br>종목마다 지난 기록 표시 · 세트 체크</td>
     <td align="center" width="33%"><img src="screenshots/03-history.png" alt="종목 상세: 레그 프레스를 기구 태그별로 나눠 본 기록" width="240"><br><b>종목 상세</b><br>같은 레그 프레스도 기구 태그별로 분리</td>
+    <td align="center" width="33%"><img src="screenshots/04-calendar.png" alt="기록 탭: 월간 캘린더와 날짜별 기록 목록" width="240"><br><b>기록</b><br>월간 캘린더 · 날짜별 요약</td>
   </tr>
   <tr>
-    <td align="center"><img src="screenshots/04-calendar.png" alt="기록 탭: 월간 캘린더와 날짜별 기록 목록" width="240"><br><b>기록</b><br>월간 캘린더 · 날짜별 요약</td>
     <td align="center"><img src="screenshots/05-session-done.png" alt="완료한 운동: 종목별 세트와 총 볼륨" width="240"><br><b>완료한 운동</b><br>종목별 세트 · 총 볼륨</td>
     <td align="center"><img src="screenshots/06-library.png" alt="라이브러리: 부위와 기구로 거르는 종목 목록" width="240"><br><b>라이브러리</b><br>부위 × 기구 2축 필터 · 루틴</td>
+    <td></td>
   </tr>
 </table>
 
@@ -32,6 +47,7 @@
 ## 기능
 
 - **기구 태그 단위 기록** — 종목(예: 레그 프레스) 아래에 기구·브랜드 태그(해머스트렝스, 아스날 …)를 두고 기록·직전 기록·최고 무게를 태그별로 집계
+- **홈 대시보드** — 기간(1주~3달)별 운동일 격자, 운동한 날·완료 세트·주 평균, 부위별 마지막 운동일
 - **세트 기록** — 무게·횟수 입력, 완료 체크, 세트 유형(드롭·슈퍼·실패), 종목 순서 변경, 루틴으로 시작
 - **기록 조회** — 월간 캘린더, 날짜별 세션 요약, 종목별 히스토리(최고 무게·최근 볼륨·갱신 표시)
 - **종목 라이브러리** — 기본 종목 약 145개 + 사용자 종목, 부위 × 기구 필터, 숨기기
@@ -44,7 +60,7 @@
 |---|---|
 | 프론트엔드 | Next.js 16 (App Router, Server Components), React 19, TypeScript, Tailwind CSS 4 |
 | 백엔드 | Next.js Server Actions, Supabase (Postgres · Auth), Zod |
-| 테스트 | Vitest (테스트 파일 24개, 케이스 약 250개) |
+| 테스트 | Vitest (테스트 파일 25개, 케이스 약 260개) |
 | 배포·운영 | Vercel (서울 리전), 로컬 Docker Supabase → 운영 DB 마이그레이션 흐름 |
 
 ## 설계에서 신경 쓴 부분
